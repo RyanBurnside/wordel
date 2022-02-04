@@ -10,6 +10,7 @@
 (def debug false) ; Spits out word if true
 (def correct-place :GREEN)
 (def inside-word :YELLOW)
+(def highlight-fg :BLACK) ; Might want :WHITE if black is hard to see
 
 ;;; Color Voodoo Section
 (def ansi-fg-colors
@@ -74,7 +75,7 @@
 
   ;; Process both words char by char, end on the shorter if one is longer
   (doseq [[w g] (map #(vector %1 %2) word guess)]
-    (set-fg-color! :BLACK)
+    (set-fg-color! highlight-fg)
 
     ;; Determine color
     (cond

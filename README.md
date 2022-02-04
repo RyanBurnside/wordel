@@ -1,44 +1,15 @@
-# wordel
+Made some other guy's mobile game in Clojure.
+It's my first Clojure project and making games is a great way to learn a language.
 
-FIXME: description
+'lein run' in the project file should get you going.
 
-## Installation
+I didn't use any addtional libraries for such a simple game.
+Make sure your terminal is ANSI color code compliant.
 
-Download from http://example.com/FIXME.
+I wrote this on Linux in an evening so uh...best to use Linux.
+It WON'T work on Windows, then again, why are you on Windows?
+Great games like this are available on Loonix.
 
-## Usage
+My grandma says I'm "pretty good at computers".
 
-FIXME: explanation
-
-    $ java -jar wordel-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2022 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+-Pixel_Outlaw

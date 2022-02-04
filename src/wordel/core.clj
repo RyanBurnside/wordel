@@ -39,19 +39,22 @@
 (defn set-fg-color!
   "Set terminal foreground color to key color - mutates"
   [key-color]
-  (print (key-color ansi-fg-colors)))
+  (print (key-color ansi-fg-colors))
+  (flush))
 
 
 (defn set-bg-color!
   "Set terminal background color to key color - mutates"
   [key-color]
-  (print (key-color ansi-bg-colors)))
+  (print (key-color ansi-bg-colors))
+  (flush))
 
 
 (defn reset-color!
   "Defaults the terminal fg and bg colors - mutates"
   []
-  (print "\u001b[0m"))
+  (print "\u001b[0m")
+  (flush))
 
 
 ;;; Accessory Functions
@@ -91,7 +94,6 @@
   "Asks a user n many times for a word"
   [n word]
   (loop [attempts-left n]
-    (set-fg-color! :YELLOW)
     (let [got-it (process-answer word (c-str/upper-case (read-line)))]
       (when (and (not got-it)
                  (> attempts-left 1))
@@ -117,7 +119,6 @@
   (loop []
     (set-fg-color! :YELLOW)
     (println "Ryan Burnside Begrudgingly Presents ... (some copyrighted game)")
-
     (set-fg-color! :CYAN)
     (let [the-word    (get-new-word 4 5)
           word-length (count the-word)
@@ -125,6 +126,7 @@
       (when debug (println "DEBUG: " the-word))
       (println (str "The word has " (str word-length) " letters."))
       (println (str "You'll get " (str tries) " tries."))
+      (reset-color!)
       (ask-times tries the-word))
 
     (when (prompt-y-or-n "Would you like to play again? y or n.")
